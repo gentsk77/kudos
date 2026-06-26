@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kudos</title>
+<style>
+  :root {
+    --bg: #fafafa; --panel: #ffffff; --border: #e5e7eb; --text: #1f2328;
+    --muted: #6b7280; --accent: #2563eb;
+    --l0: #ebedf0; --l1: #9be9a8; --l2: #40c463; --l3: #30a14e; --l4: #216e39;
+    --shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0d1117; --panel: #161b22; --border: #30363d; --text: #e6edf3;
+      --muted: #8b949e; --accent: #58a6ff;
+      --l0: #21262d; --l1: #0e4429; --l2: #006d32; --l3: #26a641; --l4: #39d353;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+    font: 15px/1.5 -apple-system, "Segoe UI", system-ui, sans-serif; padding: 32px 24px 64px; }
+  .wrap { max-width: 920px; margin: 0 auto; }
+  h1 { font-size: 22px; margin: 0 0 2px; font-weight: 600; }
+  .sub { color: var(--muted); margin: 0 0 24px; font-size: 13px; }
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 20px; }
+  .stat { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 12px 16px; box-shadow: var(--shadow); }
+  .stat .n { font-size: 24px; font-weight: 600; }
+  .stat .l { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .04em; }
+  .card { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 20px; box-shadow: var(--shadow); margin-bottom: 20px; }
+  .card h2 { font-size: 13px; margin: 0 0 14px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; font-weight: 600; }
+  .heat-scroll { overflow-x: auto; padding-bottom: 4px; }
+  svg.heat { display: block; }
+  svg.heat text { fill: var(--muted); font-size: 10px; }
+  rect.cell { rx: 2.5; cursor: pointer; }
+  rect.cell.empty { cursor: default; }
+  rect.l0 { fill: var(--l0); } rect.l1 { fill: var(--l1); }
+  rect.l2 { fill: var(--l2); } rect.l3 { fill: var(--l3); } rect.l4 { fill: var(--l4); }
+  rect.sel { stroke: var(--accent); stroke-width: 2; }
+  .legend { display: flex; align-items: center; gap: 6px; justify-content: flex-end; margin-top: 10px; font-size: 11px; color: var(--muted); }
+  .legend i { width: 13px; height: 13px; border-radius: 2.5px; display: inline-block; }
+  #detail .date { font-size: 16px; font-weight: 600; margin-bottom: 2px; }
+  #detail .summary { color: var(--text); margin-bottom: 14px; }
+  .bucket { margin-bottom: 12px; }
+  .bucket .blabel { font-size: 11px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); margin-bottom: 4px; }
+  .item { display: flex; gap: 8px; align-items: baseline; padding: 3px 0; }
+  .tag { font-size: 10px; padding: 1px 7px; border-radius: 999px; background: var(--l0); color: var(--muted); white-space: nowrap; flex-shrink: 0; }
+  .tag.calendar { background: rgba(37,99,235,.12); color: var(--accent); }
+  .empty-state { color: var(--muted); font-style: italic; }
+  .week { padding: 10px 0; border-bottom: 1px solid var(--border); }
+  .week:last-child { border-bottom: none; }
+  .week .wr { font-weight: 600; font-size: 13px; }
+  .week .wd { color: var(--muted); font-size: 12px; margin: 2px 0 6px; }
+  .week ul { margin: 4px 0 0; padding-left: 18px; }
+  .week li { font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Kudos</h1>
+  <p class="sub">Your incremental work, day by day.</p>
+  <div class="stats" id="stats"></div>
+  <div class="card">
+    <h2>Activity</h2>
+    <div class="heat-scroll"><svg class="heat" id="heat" role="img" aria-label="Daily progress contribution heatmap"></svg></div>
+    <div class="legend">Less
+      <i style="background:var(--l0)"></i><i style="background:var(--l1)"></i><i style="background:var(--l2)"></i><i style="background:var(--l3)"></i><i style="background:var(--l4)"></i>
+      More</div>
+  </div>
+  <div class="card" id="detail"></div>
+  <div class="card" id="weekly"><h2>Weekly</h2><div id="weeksBody"></div></div>
+</div>
+<script src="data.js"></script>
+<script>
+const DATA = (window.PROGRESS && window.PROGRESS.days) ? window.PROGRESS : { days: [], weeks: [] };
+const dayMap = {}; DATA.days.forEach(d => { dayMap[d.date] = d; });
+const SVGNS = 'http://www.w3.org/2000/svg';
+const CELL = 13, GAP = 3, STEP = CELL + GAP, TOP = 18, LEFT = 30, WEEKS_BACK = 26;
+const pad = n => String(n).padStart(2, '0');
+const fmt = d => `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
+const level = m => !m ? 0 : (m<=2?1:(m<=4?2:(m<=6?3:4)));
+const today = new Date(); today.setHours(0,0,0,0);
+const todayStr = fmt(today);
+let start = new Date(today); start.setDate(start.getDate() - WEEKS_BACK*7);
+if (DATA.days.length) { const e = new Date(DATA.days.map(d=>d.date).sort()[0]+'T00:00:00'); if (e<start) start=e; }
+start.setDate(start.getDate() - start.getDay());
+function elns(tag, attrs, parent){ const e=document.createElementNS(SVGNS,tag); for(const k in attrs)e.setAttribute(k,attrs[k]); if(parent)parent.appendChild(e); return e; }
+const svg = document.getElementById('heat');
+const cur = new Date(start); let col=0, lastMonth=-1, maxCol=0;
+['','Mon','','Wed','','Fri',''].forEach((lbl,row)=>{ if(lbl){ const t=elns('text',{x:LEFT-6,y:TOP+row*STEP+CELL-2,'text-anchor':'end'},svg); t.textContent=lbl; }});
+while (cur <= today || cur.getDay() !== 0) {
+  if (cur > today && cur.getDay() === 0) break;
+  const row = cur.getDay(), x = LEFT + col*STEP, y = TOP + row*STEP;
+  if (cur <= today) {
+    const ds = fmt(cur), day = dayMap[ds];
+    const r = elns('rect',{x,y,width:CELL,height:CELL,rx:2.5,class:'cell l'+level(day?day.milestones:0),'data-date':ds},svg);
+    const tt = elns('title',{},r); tt.textContent = ds + (day?` · ${day.milestones} milestone(s)`:' · nothing logged');
+    r.addEventListener('click',()=>select(ds));
+    if (cur.getDay()===0 && cur.getMonth()!==lastMonth) { lastMonth=cur.getMonth(); const t=elns('text',{x,y:TOP-6},svg); t.textContent=cur.toLocaleString('en',{month:'short'}); }
+  }
+  maxCol = col; cur.setDate(cur.getDate()+1); if (cur.getDay()===0) col++;
+}
+svg.setAttribute('width', LEFT + (maxCol+1)*STEP + 2);
+svg.setAttribute('height', TOP + 7*STEP + 2);
+function computeStats(){
+  const active = DATA.days.filter(d=>d.milestones>0).map(d=>d.date).sort();
+  const totalMs = DATA.days.reduce((a,d)=>a+(d.milestones||0),0);
+  const set = new Set(active); let cur2=0, c=new Date(today);
+  if(!set.has(todayStr)) c.setDate(c.getDate()-1);
+  while(set.has(fmt(c))){ cur2++; c.setDate(c.getDate()-1); }
+  let longest=0, run=0, prev=null;
+  active.forEach(ds=>{ const d=new Date(ds+'T00:00:00'); if(prev&&(d-prev)===86400000)run++; else run=1; longest=Math.max(longest,run); prev=d; });
+  return { activeDays: active.length, totalMs, cur: cur2, longest };
+}
+const st = computeStats();
+document.getElementById('stats').innerHTML = [['Active days',st.activeDays],['Current streak',st.cur+'d'],['Longest streak',st.longest+'d'],['Milestones',st.totalMs]]
+  .map(([l,n])=>`<div class="stat"><div class="n">${n}</div><div class="l">${l}</div></div>`).join('');
+function esc(s){ return String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c])); }
+function select(ds){
+  svg.querySelectorAll('rect.sel').forEach(c=>c.classList.remove('sel'));
+  const cell = svg.querySelector(`rect[data-date="${ds}"]`); if(cell) cell.classList.add('sel');
+  const day = dayMap[ds], elx = document.getElementById('detail');
+  const nice = new Date(ds+'T00:00:00').toLocaleDateString('en',{weekday:'long',month:'long',day:'numeric',year:'numeric'});
+  if(!day || !day.milestones){ elx.innerHTML=`<div class="date">${nice}</div><div class="empty-state">Nothing logged this day.</div>`; return; }
+  let html = `<div class="date">${nice} · ${day.milestones} milestones</div><div class="summary">${esc(day.summary||'')}</div>`;
+  (day.buckets||[]).forEach(b=>{ if(!b.items||!b.items.length)return; html+=`<div class="bucket"><div class="blabel">${esc(b.label)}</div>`;
+    b.items.forEach(it=>{ const cls=it.source==='calendar'?'tag calendar':'tag'; html+=`<div class="item"><span class="${cls}">${esc(it.repo||it.source||'')}</span><span>${esc(it.text)}</span></div>`; });
+    html+=`</div>`; });
+  elx.innerHTML = html;
+}
+const wb = document.getElementById('weeksBody');
+if (DATA.weeks && DATA.weeks.length) {
+  wb.innerHTML = DATA.weeks.slice().reverse().map(w=>`<div class="week"><div class="wr">Week of ${esc(w.weekStart)} - ${esc(w.weekEnd)} · ${w.activeDays} active day(s)</div><div class="wd">${esc(w.summary||'')}</div>${(w.highlights||[]).length?'<ul>'+w.highlights.map(h=>`<li>${esc(h)}</li>`).join('')+'</ul>':''}</div>`).join('');
+} else { wb.innerHTML = `<div class="empty-state">No weekly rollups yet. Run /kudos:recap 7d.</div>`; }
+select(dayMap[todayStr] ? todayStr : (DATA.days.length ? DATA.days.map(d=>d.date).sort().slice(-1)[0] : todayStr));
+</script>
+</body>
+</html>

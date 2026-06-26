@@ -1,0 +1,19 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "kudos",
+  "description": "Kudos: give yourself credit for the incremental work you do every day.",
+  "owner": {
+    "name": "Travis Shu"
+  },
+  "plugins": [
+    {
+      "name": "kudos",
+      "description": "Make daily incremental work visible across your repos and folders. /kudos:recap summarizes a day (or any range) into an honest log and a contribution heatmap; /kudos:watch enlists what to track; /kudos:setup gets you running.",
+      "source": "./plugins/kudos",
+      "category": "productivity",
+      "author": {
+        "name": "Travis Shu"
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "watch": [],
+  "snapshotDir": ".snapshots",
+  "snapshotTimes": ["12:00", "18:00", "23:55"],
+  "timezone": "America/Los_Angeles",
+  "buckets": [
+    { "label": "Morning",   "from": "00:00" },
+    { "label": "Afternoon", "from": "12:00" },
+    { "label": "Evening",   "from": "18:00" }
+  ],
+  "calendars": {
+    "enabled": false,
+    "include": [],
+    "ignore": []
+  }
+}
