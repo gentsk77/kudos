@@ -62,7 +62,7 @@ Morning = before 12:00, Afternoon = 12:00-17:59, Evening = 18:00 on. Attribute a
 
 ## Idempotency
 
-Re-running for a day/range **replaces** those entries, never duplicates. `data/progress.json` is the source of truth; regenerate `dashboard/data.js` only via `bin/sync-dashboard.mjs` (never hand-write it).
+Re-running for a day/range **replaces** those entries, never duplicates. `data/progress.json` is the source of truth; the heatmap renders inline in chat from it (there is no file dashboard).
 
 ## Changelog
 

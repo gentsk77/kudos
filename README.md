@@ -22,12 +22,12 @@ Or: Customize -> Plugins -> Upload local plugin, and upload `dist/kudos.zip`.
 1. `/kudos:setup` - pick what to track, calendar, tone, and register the daily snapshot. (Needs Node.js on PATH.)
 2. `/kudos:recap` - summarize today. Or `/kudos:recap 7d`, `/kudos:recap 2026-06-25`, `/kudos:recap 2026-06-20..2026-06-26`.
 3. `/kudos:watch <path>` - add another repo or folder anytime.
-4. Open `~/.kudos/dashboard/index.html` for the heatmap.
+4. The recap renders the heatmap + breakdown **inline** in chat - no file to hunt for.
 
 ## How it works
 - A small **node** snapshot script runs on a schedule (Windows Task Scheduler / cron) and captures working-tree state locally. No AI, no network.
-- `/kudos:recap` reconstructs a day (or range) from git history + file mtimes + (optionally) your calendar, and writes the log + heatmap. The rules live in `~/.kudos/HANDBOOK.md` - yours to tune.
-- Everything personal lives in your data home `~/.kudos/` (override with `KUDOS_HOME`). The plugin itself stores no data.
+- `/kudos:recap` reconstructs a day (or range) from git history + file mtimes + (optionally) your calendar, writes an honest log, and renders the contribution heatmap inline. The rules live in `~/.kudos/HANDBOOK.md` - yours to tune.
+- Everything personal lives in your data home `~/.kudos/` (override with `KUDOS_HOME`). The plugin itself stores no data, and **updating the plugin never touches your data** - `/kudos:setup` after an update only migrates config, never wipes.
 
 ## Privacy
 Your log, snapshots, and config never leave your machine. The published plugin contains no personal data.
@@ -39,6 +39,6 @@ plugins/kudos/                    the plugin
   .claude-plugin/plugin.json
   skills/{setup,watch,recap}/
   scripts/                        node core + per-OS scheduler + build
-  assets/                         HANDBOOK, dashboard, config templates
+  assets/                         HANDBOOK, inline-heatmap, config templates
 dist/kudos.zip                    uploadable plugin bundle
 ```

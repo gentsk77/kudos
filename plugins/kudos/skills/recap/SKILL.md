@@ -27,14 +27,12 @@ Apply the HANDBOOK tone. Roll up trivial/whitespace/typo changes. Do NOT count K
 - For each day in range, upsert its object in `<home>/data/progress.json` `days`: `{ date, milestones (count), summary, buckets:[{label, items:[{repo, source, text}]}] }`. Keep newest day first.
 - Prepend/replace each day's `## <date>` section in `<home>/data/daily-log.md` (newest on top).
 - If the range spans more than one day, also write an **arc**: upsert a `weeks` entry `{ weekStart, weekEnd, activeDays, summary, highlights:[...] }` and a `## <range>` arc section at the top of the log.
-- Regenerate the dashboard by running `node "<home>/bin/sync-dashboard.mjs"`. Do NOT hand-write `data.js`.
+- `data/progress.json` is the source of truth for the heatmap. There is no file dashboard - it renders inline (next step).
 
-## 5. Show it inline (this is the primary output - do not just point at a file)
-The dashboard file is buried in the data home, so always surface the result in the conversation:
+## 5. Show it inline (this is the output - render it in the conversation)
 - **Heatmap, inline:** read `${CLAUDE_PLUGIN_ROOT}/assets/inline-heatmap.html`, replace the token `__PROGRESS__` with the full contents of `<home>/data/progress.json`, and render it with your inline visualization capability (e.g. the visualize / show_widget tool). If no inline-visualization tool is available, fall back to a compact unicode strip for the range (one row, a shaded square per day by milestone count) so something always shows.
 - **Recap text, inline:** in the HANDBOOK's tone, print the result as markdown -
   - single day: the one-line summary, then the bucketed milestones (with a calendar tag where relevant);
   - range: the arc summary, then each day as `YYYY-MM-DD · N · <one line>`, then the notable milestones.
-- Then mention, in one line, that the persistent dashboard lives at `<home>/dashboard/index.html`.
 
 A light day still counts as a logged day - say so plainly rather than padding it.
