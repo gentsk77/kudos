@@ -2,13 +2,9 @@
 
 Give yourself credit for the work you actually do.
 
-Kudos quietly watches the repos and folders you work in, then turns your incremental daily work into an honest log and a GitHub-style contribution heatmap. It is for the feeling of "I never notice my own progress, I only see the end result." Now you can see the days you showed up.
+Kudos is a Claude Code plugin that quietly watches the repos and folders you work in, then turns your incremental daily work into an honest log and a GitHub-style contribution heatmap. It is for the feeling of "I never notice my own progress, I only see the end result." Now you can see the days you showed up.
 
 ![Daily heatmap with per-day drill-down](docs/heatmap.png)
-
-## Requirements
-- Node.js 18 or newer on your PATH (the snapshot and setup scripts are plain Node with no dependencies), and git.
-- The inline heatmap renders in Claude desktop and Cowork. In the Claude Code CLI there is no inline widget, so the recap shows the same days as a text strip of shaded squares instead.
 
 ## Install
 
@@ -27,6 +23,11 @@ Or: Customize -> Plugins -> Upload local plugin, and upload `dist/kudos.zip`.
 2. `/kudos:recap` - summarize today. Or `/kudos:recap 7d`, `/kudos:recap 2026-06-25`, `/kudos:recap 2026-06-20..2026-06-26`.
 3. `/kudos:watch <path>` - add another repo or folder anytime.
 4. The recap renders the heatmap + breakdown **inline** in chat - no file to hunt for.
+
+## Requirements
+- Node.js 18 or newer on your PATH (the snapshot and setup scripts are plain Node with no dependencies), and git.
+- The inline heatmap renders in Claude desktop and Cowork. In the Claude Code CLI there is no inline widget, so the recap shows the same days as a text strip of shaded squares instead.
+
 
 ## How it works
 - A small **node** snapshot script runs on a schedule (Windows Task Scheduler / cron) and captures working-tree state locally. No AI, no network.
