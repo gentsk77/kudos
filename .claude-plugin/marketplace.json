@@ -8,6 +8,7 @@
   "plugins": [
     {
       "name": "kudos",
+      "version": "1.2.1",
       "description": "Make daily incremental work visible across your repos and folders. /kudos:recap summarizes a day (or any range) into an honest log and a contribution heatmap; /kudos:watch enlists what to track; /kudos:setup gets you running.",
       "source": "./plugins/kudos",
       "category": "productivity",

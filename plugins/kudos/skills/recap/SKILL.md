@@ -15,12 +15,13 @@ You are running a Kudos recap. Data home is `~/.kudos` (or `$KUDOS_HOME`). If `<
 
 ## 2. Reconstruct each day in the range (per HANDBOOK "Recap reconstruction rule")
 For each watched entry in `config.json`:
-- `git`: `git -C <path> log --since="<day> 00:00" --until="<day> 23:59" --patch --no-merges` PLUS `git -C <path> diff HEAD` and untracked files. **Date by work-time (mtime), not commit time**; never split a past-midnight session.
+- `git`: `git -C <path> log --author="$(git -C <path> config user.email)" --since="<day> 00:00" --until="<day> 23:59" --patch --no-merges` PLUS `git -C <path> diff HEAD` and untracked files. **Date by work-time (mtime), not commit time**; never split a past-midnight session.
 - `dir`: files under `<path>` whose mtime falls in the day (respect the ignore list); read changed files.
 - `calendar` (only if `calendars.enabled`): list the day's events from each included calendar id with the connected calendar tool; keep interviews/calls/mocks, ignore focus-time/OOO/holidays/routine. If no calendar tool is available, skip silently.
 Use `<snapshotDir>/<name>/<day>/<HHmm>/` to bucket into Morning/Afternoon/Evening; if none, use a single "Today" bucket.
 
 ## 3. Turn diffs into honest milestones
+Milestones are your own commits only: the `--author` filter above keeps teammates' commits in shared repos out of your log. If `git config user.email` is empty for a repo, say so and skip that repo's commits rather than counting everyone's.
 Apply the HANDBOOK tone. Roll up trivial/whitespace/typo changes. Do NOT count Kudos's own generated output.
 
 ## 4. Write (idempotent - replace, never duplicate)

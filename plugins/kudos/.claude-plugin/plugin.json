@@ -1,7 +1,7 @@
 {
   "name": "kudos",
   "description": "Make daily incremental work visible. Give yourself credit for what you actually did. /kudos:recap summarizes a day or a range into an honest log and a contribution heatmap, /kudos:watch enlists repos and folders to track, /kudos:setup gets you running.",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "author": {
     "name": "Travis Shu"
   },

@@ -20,7 +20,7 @@ A meaningful unit of work, not a file or a line. Examples: shipped or fixed a fe
 
 - Whitespace, formatting, typo-only, or auto-generated reflows. Roll up or omit.
 - Pure renames/moves with no content change.
-- Kudos's own generated output (the data home's `data/`, `dashboard/`, `.snapshots/`).
+- Kudos's own generated output (the data home's `data/` and `.snapshots/`).
 
 ## Intensity scale (heatmap color)
 
@@ -44,7 +44,7 @@ Every item carries a `source`:
 ## Recap reconstruction rule
 
 The day's total is reconstructed at recap time:
-1. **git repos**: commits authored in the range (`git log --since --until --patch`) PLUS current uncommitted work (`git diff HEAD` + untracked files).
+1. **git repos**: your own commits in the range (`git log --author=<your git email> --since --until --patch`; teammates' commits never count) PLUS current uncommitted work (`git diff HEAD` + untracked files).
 2. **plain dirs**: files whose mtime falls in the range (filtered by the ignore list).
 3. **calendar** (if enabled): the range's events, kept/ignored per the Sources rule.
 
