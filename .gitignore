@@ -1,5 +1,6 @@
 # Kudos is data-free. Nothing user-specific should ever live here.
 .snapshots/
+.claude/
 node_modules/
 Thumbs.db
 .DS_Store
