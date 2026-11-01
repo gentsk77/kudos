@@ -1,0 +1,2488 @@
+{
+  "days": [
+    {
+      "date": "2026-11-01",
+      "milestones": 4,
+      "summary": "A Sunday catch-up: one API fix, two web changes and a README rewrite.",
+      "buckets": [
+        {
+          "label": "Morning",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Added idempotency keys to the payment create call"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Fixed focus order in the settings dialog"
+            }
+          ]
+        },
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Wrote component tests for the sign-in form"
+            },
+            {
+              "repo": "notes",
+              "source": "dir",
+              "text": "Rewrote the README intro after a cold read"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-10-31",
+      "milestones": 2,
+      "summary": "A solid day on demo-web, plus some writing in demo-api.",
+      "buckets": [
+        {
+          "label": "Morning",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Split the monolithic router into per-resource modules"
+            }
+          ]
+        },
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Fixed focus order in the settings dialog"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-10-30",
+      "milestones": 1,
+      "summary": "A light day: one thing finished.",
+      "buckets": [
+        {
+          "label": "Evening",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Fixed the 500 on empty POST bodies"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-10-29",
+      "milestones": 6,
+      "summary": "A full day: tests, fixes and a spec all landed.",
+      "buckets": [
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Upgraded the HTTP client and fixed the two breaking changes"
+            },
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Moved rate limiting into middleware and added per-key limits"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Rebuilt the nav for narrow screens"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Replaced the date picker with a keyboard-friendly one"
+            },
+            {
+              "repo": "notes",
+              "source": "dir",
+              "text": "Wrote the postmortem for last week's failed deploy"
+            },
+            {
+              "repo": "notes",
+              "source": "dir",
+              "text": "Wrote up the tradeoffs between the two caching designs"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-10-26",
+      "milestones": 4,
+      "summary": "A solid day on demo-api, plus some writing in demo-web.",
+      "buckets": [
+        {
+          "label": "Morning",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Documented the error codes returned by the billing routes"
+            },
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Added idempotency keys to the payment create call"
+            }
+          ]
+        },
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Lazy-loaded the charts bundle and cut first load by a third"
+            }
+          ]
+        },
+        {
+          "label": "Evening",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Added a dark theme and checked contrast on every screen"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-10-20",
+      "milestones": 1,
+      "summary": "Quiet day with a single milestone.",
+      "buckets": [
+        {
+          "label": "Evening",
+          "items": [
+            {
+              "repo": "notes",
+              "source": "dir",
+              "text": "Recorded the decision to drop the legacy import path"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-10-19",
+      "milestones": 3,
+      "summary": "A solid day on demo-api, plus some writing in notes.",
+      "buckets": [
+        {
+          "label": "Morning",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Added cursor-based pagination to the /orders endpoint"
+            }
+          ]
+        },
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Moved form state into a single reducer"
+            }
+          ]
+        },
+        {
+          "label": "Evening",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Fixed a stale-cache bug after editing a profile"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-10-17",
+      "milestones": 1,
+      "summary": "One fix landed, nothing else.",
+      "buckets": [
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "notes",
+              "source": "dir",
+              "text": "Worked through the chapter on consistent hashing and took notes"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-10-15",
+      "milestones": 6,
+      "summary": "Heavy day on notes, with follow-through in demo-web.",
+      "buckets": [
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Split the monolithic router into per-resource modules"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Wrote component tests for the sign-in form"
+            }
+          ]
+        },
+        {
+          "label": "Evening",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Replaced the date picker with a keyboard-friendly one"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Fixed layout shift on the pricing page"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Lazy-loaded the charts bundle and cut first load by a third"
+            },
+            {
+              "repo": "notes",
+              "source": "dir",
+              "text": "Logged open questions for the pricing experiment"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-10-14",
+      "milestones": 8,
+      "summary": "Heavy day on demo-web, with follow-through in notes.",
+      "buckets": [
+        {
+          "label": "Morning",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Added a health check that covers the database connection"
+            }
+          ]
+        },
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Fixed focus order in the settings dialog"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Rebuilt the nav for narrow screens"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Added a dark theme and checked contrast on every screen"
+            }
+          ]
+        },
+        {
+          "label": "Evening",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Added a loading skeleton to the report view"
+            },
+            {
+              "repo": "notes",
+              "source": "dir",
+              "text": "Logged open questions for the pricing experiment"
+            },
+            {
+              "repo": "notes",
+              "source": "dir",
+              "text": "Outlined next month's roadmap and cut it to three items"
+            },
+            {
+              "repo": "notes",
+              "source": "dir",
+              "text": "Sharpened the one-page spec for the export feature"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-10-13",
+      "milestones": 2,
+      "summary": "Steady progress across the API and the web app.",
+      "buckets": [
+        {
+          "label": "Morning",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Fixed the 500 on empty POST bodies"
+            }
+          ]
+        },
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Replaced hand-rolled validation with a shared schema"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-10-12",
+      "milestones": 5,
+      "summary": "Productive day across all three repos.",
+      "buckets": [
+        {
+          "label": "Morning",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Moved rate limiting into middleware and added per-key limits"
+            }
+          ]
+        },
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Added inline error messages to the signup form"
+            }
+          ]
+        },
+        {
+          "label": "Evening",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Added optimistic updates to the task list"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Built the empty state for the dashboard when there is no data"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Moved form state into a single reducer"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-10-05",
+      "milestones": 4,
+      "summary": "Steady progress across the API and the web app.",
+      "buckets": [
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Built the empty state for the dashboard when there is no data"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Fixed a stale-cache bug after editing a profile"
+            }
+          ]
+        },
+        {
+          "label": "Evening",
+          "items": [
+            {
+              "repo": "notes",
+              "source": "dir",
+              "text": "Recorded the decision to drop the legacy import path"
+            },
+            {
+              "repo": "notes",
+              "source": "dir",
+              "text": "Drafted the onboarding checklist for new contributors"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-10-04",
+      "milestones": 3,
+      "summary": "Most of the day went into demo-web; a smaller piece in demo-api.",
+      "buckets": [
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Added a loading skeleton to the report view"
+            },
+            {
+              "repo": "notes",
+              "source": "dir",
+              "text": "Worked through the chapter on consistent hashing and took notes"
+            },
+            {
+              "repo": "notes",
+              "source": "dir",
+              "text": "Wrote the postmortem for last week's failed deploy"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-10-03",
+      "milestones": 2,
+      "summary": "Steady progress across the API and the web app.",
+      "buckets": [
+        {
+          "label": "Morning",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Fixed focus order in the settings dialog"
+            },
+            {
+              "repo": "notes",
+              "source": "dir",
+              "text": "Rewrote the README intro after a cold read"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-10-02",
+      "milestones": 1,
+      "summary": "One fix landed, nothing else.",
+      "buckets": [
+        {
+          "label": "Evening",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Added idempotency keys to the payment create call"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-10-01",
+      "milestones": 3,
+      "summary": "Two threads moved forward: notes and demo-web.",
+      "buckets": [
+        {
+          "label": "Morning",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Rebuilt the nav for narrow screens"
+            }
+          ]
+        },
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Added a dark theme and checked contrast on every screen"
+            }
+          ]
+        },
+        {
+          "label": "Evening",
+          "items": [
+            {
+              "repo": "notes",
+              "source": "dir",
+              "text": "Sharpened the one-page spec for the export feature"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-30",
+      "milestones": 1,
+      "summary": "Small day, one real change.",
+      "buckets": [
+        {
+          "label": "Evening",
+          "items": [
+            {
+              "repo": "notes",
+              "source": "dir",
+              "text": "Summarized the user interviews into five themes"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-29",
+      "milestones": 5,
+      "summary": "A full day: tests, fixes and a spec all landed.",
+      "buckets": [
+        {
+          "label": "Morning",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Wrote a migration to backfill the created_at column"
+            }
+          ]
+        },
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Cut the p95 latency of /search by adding a missing index"
+            }
+          ]
+        },
+        {
+          "label": "Evening",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Added optimistic updates to the task list"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Replaced the date picker with a keyboard-friendly one"
+            },
+            {
+              "repo": "notes",
+              "source": "dir",
+              "text": "Wrote up the tradeoffs between the two caching designs"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-28",
+      "milestones": 1,
+      "summary": "One fix landed, nothing else.",
+      "buckets": [
+        {
+          "label": "Evening",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Fixed a stale-cache bug after editing a profile"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-25",
+      "milestones": 1,
+      "summary": "A light day: one thing finished.",
+      "buckets": [
+        {
+          "label": "Evening",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Fixed a race in the token refresh handler"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-24",
+      "milestones": 1,
+      "summary": "One fix landed, nothing else.",
+      "buckets": [
+        {
+          "label": "Evening",
+          "items": [
+            {
+              "repo": "notes",
+              "source": "dir",
+              "text": "Summarized the user interviews into five themes"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-23",
+      "milestones": 1,
+      "summary": "A light day: one thing finished.",
+      "buckets": [
+        {
+          "label": "Evening",
+          "items": [
+            {
+              "repo": "notes",
+              "source": "dir",
+              "text": "Wrote up the tradeoffs between the two caching designs"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-22",
+      "milestones": 1,
+      "summary": "A light day: one thing finished.",
+      "buckets": [
+        {
+          "label": "Evening",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Wrote integration tests for the webhook retry queue"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-18",
+      "milestones": 7,
+      "summary": "A full day: tests, fixes and a spec all landed.",
+      "buckets": [
+        {
+          "label": "Morning",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Cut the p95 latency of /search by adding a missing index"
+            },
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Added structured request logging with a request id"
+            },
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Fixed a race in the token refresh handler"
+            },
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Upgraded the HTTP client and fixed the two breaking changes"
+            },
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Added structured request logging with a request id"
+            }
+          ]
+        },
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Fixed layout shift on the pricing page"
+            }
+          ]
+        },
+        {
+          "label": "Evening",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Moved form state into a single reducer"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-16",
+      "milestones": 6,
+      "summary": "Heavy day on demo-web, with follow-through in demo-api.",
+      "buckets": [
+        {
+          "label": "Morning",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Upgraded the HTTP client and fixed the two breaking changes"
+            },
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Documented the error codes returned by the billing routes"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Wrote component tests for the sign-in form"
+            }
+          ]
+        },
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Lazy-loaded the charts bundle and cut first load by a third"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Added inline error messages to the signup form"
+            }
+          ]
+        },
+        {
+          "label": "Evening",
+          "items": [
+            {
+              "repo": "notes",
+              "source": "dir",
+              "text": "Worked through the chapter on consistent hashing and took notes"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-15",
+      "milestones": 7,
+      "summary": "Heavy day on demo-web, with follow-through in notes.",
+      "buckets": [
+        {
+          "label": "Morning",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Wrote component tests for the sign-in form"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Added optimistic updates to the task list"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Built the empty state for the dashboard when there is no data"
+            }
+          ]
+        },
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Fixed layout shift on the pricing page"
+            }
+          ]
+        },
+        {
+          "label": "Evening",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Fixed a stale-cache bug after editing a profile"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Replaced the date picker with a keyboard-friendly one"
+            },
+            {
+              "repo": "notes",
+              "source": "dir",
+              "text": "Wrote the postmortem for last week's failed deploy"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-14",
+      "milestones": 5,
+      "summary": "Productive day across all three repos.",
+      "buckets": [
+        {
+          "label": "Morning",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Wrote a migration to backfill the created_at column"
+            },
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Replaced hand-rolled validation with a shared schema"
+            }
+          ]
+        },
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Added a loading skeleton to the report view"
+            }
+          ]
+        },
+        {
+          "label": "Evening",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Rebuilt the nav for narrow screens"
+            },
+            {
+              "repo": "notes",
+              "source": "dir",
+              "text": "Drafted the onboarding checklist for new contributors"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-12",
+      "milestones": 1,
+      "summary": "Small day, one real change.",
+      "buckets": [
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Moved form state into a single reducer"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-11",
+      "milestones": 1,
+      "summary": "A light day: one thing finished.",
+      "buckets": [
+        {
+          "label": "Evening",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Fixed focus order in the settings dialog"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-10",
+      "milestones": 4,
+      "summary": "A solid day on demo-web, plus some writing in notes.",
+      "buckets": [
+        {
+          "label": "Morning",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Moved rate limiting into middleware and added per-key limits"
+            },
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Fixed the 500 on empty POST bodies"
+            }
+          ]
+        },
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "notes",
+              "source": "dir",
+              "text": "Logged open questions for the pricing experiment"
+            }
+          ]
+        },
+        {
+          "label": "Evening",
+          "items": [
+            {
+              "repo": "notes",
+              "source": "dir",
+              "text": "Recorded the decision to drop the legacy import path"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-09",
+      "milestones": 5,
+      "summary": "A full day: tests, fixes and a spec all landed.",
+      "buckets": [
+        {
+          "label": "Morning",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Split the monolithic router into per-resource modules"
+            }
+          ]
+        },
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Added a dark theme and checked contrast on every screen"
+            },
+            {
+              "repo": "notes",
+              "source": "dir",
+              "text": "Rewrote the README intro after a cold read"
+            }
+          ]
+        },
+        {
+          "label": "Evening",
+          "items": [
+            {
+              "repo": "notes",
+              "source": "dir",
+              "text": "Outlined next month's roadmap and cut it to three items"
+            },
+            {
+              "repo": "notes",
+              "source": "dir",
+              "text": "Sharpened the one-page spec for the export feature"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-08",
+      "milestones": 7,
+      "summary": "Heavy day on demo-api, with follow-through in demo-web.",
+      "buckets": [
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Wrote integration tests for the webhook retry queue"
+            },
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Wrote integration tests for the webhook retry queue"
+            }
+          ]
+        },
+        {
+          "label": "Evening",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Added a health check that covers the database connection"
+            },
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Added idempotency keys to the payment create call"
+            },
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Added cursor-based pagination to the /orders endpoint"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Lazy-loaded the charts bundle and cut first load by a third"
+            },
+            {
+              "repo": "notes",
+              "source": "dir",
+              "text": "Logged open questions for the pricing experiment"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-07",
+      "milestones": 4,
+      "summary": "Steady progress across the API and the web app.",
+      "buckets": [
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Documented the error codes returned by the billing routes"
+            },
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Moved rate limiting into middleware and added per-key limits"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Added optimistic updates to the task list"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Added inline error messages to the signup form"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-06",
+      "milestones": 1,
+      "summary": "Small day, one real change.",
+      "buckets": [
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Built the empty state for the dashboard when there is no data"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-04",
+      "milestones": 5,
+      "summary": "Productive day across all three repos.",
+      "buckets": [
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Added a health check that covers the database connection"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Wrote component tests for the sign-in form"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Fixed focus order in the settings dialog"
+            }
+          ]
+        },
+        {
+          "label": "Evening",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Replaced the date picker with a keyboard-friendly one"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Added inline error messages to the signup form"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-02",
+      "milestones": 4,
+      "summary": "Steady progress across the API and the web app.",
+      "buckets": [
+        {
+          "label": "Morning",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Cut the p95 latency of /search by adding a missing index"
+            }
+          ]
+        },
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Added cursor-based pagination to the /orders endpoint"
+            }
+          ]
+        },
+        {
+          "label": "Evening",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Rebuilt the nav for narrow screens"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Added a loading skeleton to the report view"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-01",
+      "milestones": 5,
+      "summary": "A full day: tests, fixes and a spec all landed.",
+      "buckets": [
+        {
+          "label": "Morning",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Split the monolithic router into per-resource modules"
+            }
+          ]
+        },
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Added idempotency keys to the payment create call"
+            }
+          ]
+        },
+        {
+          "label": "Evening",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Upgraded the HTTP client and fixed the two breaking changes"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Lazy-loaded the charts bundle and cut first load by a third"
+            },
+            {
+              "repo": "notes",
+              "source": "dir",
+              "text": "Drafted the onboarding checklist for new contributors"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-08-31",
+      "milestones": 4,
+      "summary": "A solid day on demo-api, plus some writing in notes.",
+      "buckets": [
+        {
+          "label": "Morning",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Fixed a race in the token refresh handler"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Fixed layout shift on the pricing page"
+            }
+          ]
+        },
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Fixed a stale-cache bug after editing a profile"
+            }
+          ]
+        },
+        {
+          "label": "Evening",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Added a dark theme and checked contrast on every screen"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-08-30",
+      "milestones": 2,
+      "summary": "Most of the day went into demo-api; a smaller piece in demo-web.",
+      "buckets": [
+        {
+          "label": "Morning",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Added structured request logging with a request id"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Moved form state into a single reducer"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-08-29",
+      "milestones": 3,
+      "summary": "Two threads moved forward: notes and demo-api.",
+      "buckets": [
+        {
+          "label": "Morning",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Added a dark theme and checked contrast on every screen"
+            },
+            {
+              "repo": "notes",
+              "source": "dir",
+              "text": "Sharpened the one-page spec for the export feature"
+            },
+            {
+              "repo": "notes",
+              "source": "dir",
+              "text": "Rewrote the README intro after a cold read"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-08-27",
+      "milestones": 4,
+      "summary": "Steady progress across the API and the web app.",
+      "buckets": [
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Replaced the date picker with a keyboard-friendly one"
+            }
+          ]
+        },
+        {
+          "label": "Evening",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Fixed layout shift on the pricing page"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Rebuilt the nav for narrow screens"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Added inline error messages to the signup form"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-08-14",
+      "milestones": 2,
+      "summary": "Most of the day went into demo-api; a smaller piece in demo-web.",
+      "buckets": [
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Moved form state into a single reducer"
+            }
+          ]
+        },
+        {
+          "label": "Evening",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Added a loading skeleton to the report view"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-08-13",
+      "milestones": 3,
+      "summary": "Most of the day went into demo-api; a smaller piece in notes.",
+      "buckets": [
+        {
+          "label": "Morning",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Fixed the 500 on empty POST bodies"
+            },
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Wrote a migration to backfill the created_at column"
+            }
+          ]
+        },
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Replaced hand-rolled validation with a shared schema"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-08-12",
+      "milestones": 3,
+      "summary": "Two threads moved forward: demo-api and demo-web.",
+      "buckets": [
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Cut the p95 latency of /search by adding a missing index"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Fixed focus order in the settings dialog"
+            }
+          ]
+        },
+        {
+          "label": "Evening",
+          "items": [
+            {
+              "repo": "notes",
+              "source": "dir",
+              "text": "Summarized the user interviews into five themes"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-08-11",
+      "milestones": 2,
+      "summary": "A solid day on notes, plus some writing in demo-web.",
+      "buckets": [
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Lazy-loaded the charts bundle and cut first load by a third"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Fixed a stale-cache bug after editing a profile"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-08-10",
+      "milestones": 8,
+      "summary": "A full day: tests, fixes and a spec all landed.",
+      "buckets": [
+        {
+          "label": "Morning",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Added a health check that covers the database connection"
+            },
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Documented the error codes returned by the billing routes"
+            },
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Wrote a migration to backfill the created_at column"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Built the empty state for the dashboard when there is no data"
+            }
+          ]
+        },
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Wrote component tests for the sign-in form"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Added optimistic updates to the task list"
+            },
+            {
+              "repo": "notes",
+              "source": "dir",
+              "text": "Wrote up the tradeoffs between the two caching designs"
+            },
+            {
+              "repo": "notes",
+              "source": "dir",
+              "text": "Outlined next month's roadmap and cut it to three items"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-08-06",
+      "milestones": 6,
+      "summary": "A full day: tests, fixes and a spec all landed.",
+      "buckets": [
+        {
+          "label": "Morning",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Fixed the 500 on empty POST bodies"
+            },
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Fixed a race in the token refresh handler"
+            },
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Moved rate limiting into middleware and added per-key limits"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Built the empty state for the dashboard when there is no data"
+            }
+          ]
+        },
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Rebuilt the nav for narrow screens"
+            }
+          ]
+        },
+        {
+          "label": "Evening",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Added optimistic updates to the task list"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-08-05",
+      "milestones": 3,
+      "summary": "Two threads moved forward: demo-web and demo-api.",
+      "buckets": [
+        {
+          "label": "Morning",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Wrote integration tests for the webhook retry queue"
+            }
+          ]
+        },
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Moved form state into a single reducer"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Added inline error messages to the signup form"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-08-04",
+      "milestones": 2,
+      "summary": "Steady progress across the API and the web app.",
+      "buckets": [
+        {
+          "label": "Morning",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Wrote component tests for the sign-in form"
+            }
+          ]
+        },
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Fixed layout shift on the pricing page"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-08-03",
+      "milestones": 6,
+      "summary": "Productive day across all three repos.",
+      "buckets": [
+        {
+          "label": "Morning",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Added structured request logging with a request id"
+            }
+          ]
+        },
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Added cursor-based pagination to the /orders endpoint"
+            },
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Replaced hand-rolled validation with a shared schema"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Lazy-loaded the charts bundle and cut first load by a third"
+            }
+          ]
+        },
+        {
+          "label": "Evening",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Fixed a stale-cache bug after editing a profile"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Added a dark theme and checked contrast on every screen"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-31",
+      "milestones": 5,
+      "summary": "Heavy day on demo-web, with follow-through in demo-api.",
+      "buckets": [
+        {
+          "label": "Morning",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Upgraded the HTTP client and fixed the two breaking changes"
+            }
+          ]
+        },
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Added a loading skeleton to the report view"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Replaced the date picker with a keyboard-friendly one"
+            }
+          ]
+        },
+        {
+          "label": "Evening",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Fixed focus order in the settings dialog"
+            },
+            {
+              "repo": "notes",
+              "source": "dir",
+              "text": "Wrote the postmortem for last week's failed deploy"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-30",
+      "milestones": 3,
+      "summary": "A solid day on notes, plus some writing in demo-api.",
+      "buckets": [
+        {
+          "label": "Morning",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Split the monolithic router into per-resource modules"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Added optimistic updates to the task list"
+            }
+          ]
+        },
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "notes",
+              "source": "dir",
+              "text": "Worked through the chapter on consistent hashing and took notes"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-29",
+      "milestones": 3,
+      "summary": "Two threads moved forward: demo-api and demo-web.",
+      "buckets": [
+        {
+          "label": "Morning",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Documented the error codes returned by the billing routes"
+            }
+          ]
+        },
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Added idempotency keys to the payment create call"
+            },
+            {
+              "repo": "notes",
+              "source": "dir",
+              "text": "Recorded the decision to drop the legacy import path"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-28",
+      "milestones": 4,
+      "summary": "Two threads moved forward: demo-api and demo-web.",
+      "buckets": [
+        {
+          "label": "Morning",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Added idempotency keys to the payment create call"
+            }
+          ]
+        },
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Wrote component tests for the sign-in form"
+            }
+          ]
+        },
+        {
+          "label": "Evening",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Built the empty state for the dashboard when there is no data"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Fixed a stale-cache bug after editing a profile"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-27",
+      "milestones": 4,
+      "summary": "A solid day on demo-web, plus some writing in notes.",
+      "buckets": [
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Cut the p95 latency of /search by adding a missing index"
+            },
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Upgraded the HTTP client and fixed the two breaking changes"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Replaced the date picker with a keyboard-friendly one"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Added a loading skeleton to the report view"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-26",
+      "milestones": 3,
+      "summary": "Most of the day went into demo-api; a smaller piece in demo-web.",
+      "buckets": [
+        {
+          "label": "Morning",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Added cursor-based pagination to the /orders endpoint"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Moved form state into a single reducer"
+            }
+          ]
+        },
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "notes",
+              "source": "dir",
+              "text": "Drafted the onboarding checklist for new contributors"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-23",
+      "milestones": 2,
+      "summary": "Two threads moved forward: demo-api and demo-web.",
+      "buckets": [
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Fixed a race in the token refresh handler"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Lazy-loaded the charts bundle and cut first load by a third"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-22",
+      "milestones": 7,
+      "summary": "A full day: tests, fixes and a spec all landed.",
+      "buckets": [
+        {
+          "label": "Morning",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Wrote integration tests for the webhook retry queue"
+            },
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Wrote a migration to backfill the created_at column"
+            },
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Moved rate limiting into middleware and added per-key limits"
+            }
+          ]
+        },
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Added structured request logging with a request id"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Added inline error messages to the signup form"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Added a dark theme and checked contrast on every screen"
+            },
+            {
+              "repo": "notes",
+              "source": "dir",
+              "text": "Outlined next month's roadmap and cut it to three items"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-21",
+      "milestones": 3,
+      "summary": "Steady progress across the API and the web app.",
+      "buckets": [
+        {
+          "label": "Morning",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Replaced hand-rolled validation with a shared schema"
+            }
+          ]
+        },
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Fixed the 500 on empty POST bodies"
+            }
+          ]
+        },
+        {
+          "label": "Evening",
+          "items": [
+            {
+              "repo": "notes",
+              "source": "dir",
+              "text": "Worked through the chapter on consistent hashing and took notes"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-20",
+      "milestones": 4,
+      "summary": "Two threads moved forward: notes and demo-web.",
+      "buckets": [
+        {
+          "label": "Morning",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Split the monolithic router into per-resource modules"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Fixed layout shift on the pricing page"
+            }
+          ]
+        },
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Rebuilt the nav for narrow screens"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Fixed focus order in the settings dialog"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-17",
+      "milestones": 4,
+      "summary": "Steady progress across the API and the web app.",
+      "buckets": [
+        {
+          "label": "Morning",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Added a health check that covers the database connection"
+            }
+          ]
+        },
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Built the empty state for the dashboard when there is no data"
+            }
+          ]
+        },
+        {
+          "label": "Evening",
+          "items": [
+            {
+              "repo": "notes",
+              "source": "dir",
+              "text": "Recorded the decision to drop the legacy import path"
+            },
+            {
+              "repo": "notes",
+              "source": "dir",
+              "text": "Rewrote the README intro after a cold read"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-15",
+      "milestones": 5,
+      "summary": "Heavy day on demo-web, with follow-through in notes.",
+      "buckets": [
+        {
+          "label": "Morning",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Fixed the 500 on empty POST bodies"
+            },
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Wrote a migration to backfill the created_at column"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Added inline error messages to the signup form"
+            }
+          ]
+        },
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Added optimistic updates to the task list"
+            }
+          ]
+        },
+        {
+          "label": "Evening",
+          "items": [
+            {
+              "repo": "notes",
+              "source": "dir",
+              "text": "Logged open questions for the pricing experiment"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-14",
+      "milestones": 6,
+      "summary": "A full day: tests, fixes and a spec all landed.",
+      "buckets": [
+        {
+          "label": "Morning",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Documented the error codes returned by the billing routes"
+            }
+          ]
+        },
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Wrote integration tests for the webhook retry queue"
+            },
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Cut the p95 latency of /search by adding a missing index"
+            },
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Replaced hand-rolled validation with a shared schema"
+            }
+          ]
+        },
+        {
+          "label": "Evening",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Fixed focus order in the settings dialog"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Added a loading skeleton to the report view"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-13",
+      "milestones": 6,
+      "summary": "Heavy day on notes, with follow-through in demo-web.",
+      "buckets": [
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Moved form state into a single reducer"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Lazy-loaded the charts bundle and cut first load by a third"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Rebuilt the nav for narrow screens"
+            },
+            {
+              "repo": "notes",
+              "source": "dir",
+              "text": "Wrote the postmortem for last week's failed deploy"
+            },
+            {
+              "repo": "notes",
+              "source": "dir",
+              "text": "Summarized the user interviews into five themes"
+            },
+            {
+              "repo": "notes",
+              "source": "dir",
+              "text": "Sharpened the one-page spec for the export feature"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-11",
+      "milestones": 1,
+      "summary": "One fix landed, nothing else.",
+      "buckets": [
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Fixed a race in the token refresh handler"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-10",
+      "milestones": 4,
+      "summary": "Most of the day went into demo-web; a smaller piece in demo-api.",
+      "buckets": [
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Moved rate limiting into middleware and added per-key limits"
+            },
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Added a health check that covers the database connection"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Wrote component tests for the sign-in form"
+            }
+          ]
+        },
+        {
+          "label": "Evening",
+          "items": [
+            {
+              "repo": "notes",
+              "source": "dir",
+              "text": "Wrote up the tradeoffs between the two caching designs"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-09",
+      "milestones": 2,
+      "summary": "Steady progress across the API and the web app.",
+      "buckets": [
+        {
+          "label": "Morning",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Split the monolithic router into per-resource modules"
+            }
+          ]
+        },
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Fixed layout shift on the pricing page"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-08",
+      "milestones": 1,
+      "summary": "Small day, one real change.",
+      "buckets": [
+        {
+          "label": "Evening",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Added structured request logging with a request id"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-07",
+      "milestones": 4,
+      "summary": "Steady progress across the API and the web app.",
+      "buckets": [
+        {
+          "label": "Morning",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Added cursor-based pagination to the /orders endpoint"
+            },
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Upgraded the HTTP client and fixed the two breaking changes"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Added a dark theme and checked contrast on every screen"
+            }
+          ]
+        },
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Replaced the date picker with a keyboard-friendly one"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-06",
+      "milestones": 2,
+      "summary": "Steady progress across the API and the web app.",
+      "buckets": [
+        {
+          "label": "Afternoon",
+          "items": [
+            {
+              "repo": "demo-api",
+              "source": "repo",
+              "text": "Added idempotency keys to the payment create call"
+            },
+            {
+              "repo": "demo-web",
+              "source": "repo",
+              "text": "Fixed a stale-cache bug after editing a profile"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "weeks": [
+    {
+      "weekStart": "2026-10-25",
+      "weekEnd": "2026-10-31",
+      "activeDays": 4,
+      "summary": "4 active days, 13 milestones, mostly in demo-api and demo-web.",
+      "highlights": [
+        "Upgraded the HTTP client and fixed the two breaking changes",
+        "Documented the error codes returned by the billing routes"
+      ]
+    },
+    {
+      "weekStart": "2026-10-18",
+      "weekEnd": "2026-10-24",
+      "activeDays": 2,
+      "summary": "2 active days, 4 milestones, mostly in demo-api and demo-web.",
+      "highlights": [
+        "Added cursor-based pagination to the /orders endpoint",
+        "Recorded the decision to drop the legacy import path"
+      ]
+    },
+    {
+      "weekStart": "2026-10-11",
+      "weekEnd": "2026-10-17",
+      "activeDays": 5,
+      "summary": "5 active days, 22 milestones, mostly in demo-api and demo-web.",
+      "highlights": [
+        "Added a health check that covers the database connection",
+        "Split the monolithic router into per-resource modules"
+      ]
+    },
+    {
+      "weekStart": "2026-10-04",
+      "weekEnd": "2026-10-10",
+      "activeDays": 2,
+      "summary": "2 active days, 7 milestones, mostly in demo-api and demo-web.",
+      "highlights": [
+        "Built the empty state for the dashboard when there is no data",
+        "Added a loading skeleton to the report view"
+      ]
+    }
+  ]
+}
